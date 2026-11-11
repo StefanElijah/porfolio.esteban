@@ -49,15 +49,15 @@ El sitio es estático y no requiere adaptador. Configuración del proyecto:
 
 Variables de entorno en Production:
 
-- `SITE_URL=https://estebanpacheco.pages.dev` (ajústala si el proyecto usa otro nombre)
+- `SITE_URL=https://porfolioesteban.pages.dev` (ajústala si el proyecto usa otro nombre)
 - `NODE_VERSION=20`
 
 Cada push a `main` se despliega automáticamente.
 
 ## Flujo de trabajo
 
-- `Develop`: rama de desarrollo diario. Los pushes no generan despliegues.
-- `main`: producción. Solo recibe merges desde `Develop` y dispara el despliegue en Cloudflare Pages.
+- `develop`: rama de desarrollo diario. Los pushes no generan despliegues.
+- `main`: producción. Solo recibe merges desde `develop` y dispara el despliegue en Cloudflare Pages.
 
 ## Licencia
 
