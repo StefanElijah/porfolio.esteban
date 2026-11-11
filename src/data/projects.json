@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Pastelería Mil Sabores",
+    "description": "Plataforma de pastelería con catálogo, flujo de compra, autenticación de usuarios y gestor de inventario. Construida con Next.js, React, TypeScript y Tailwind CSS.",
+    "link": "https://pasteleria-mil-sabores.vercel.app",
+    "github": "https://github.com/StefanElijah/pasteleria-project",
+    "image": "",
+    "tags": ["NEXT", "REACT", "TYPESCRIPT", "TAILWIND"]
+  },
+  {
+    "title": "Zynema",
+    "description": "Plataforma de streaming tipo Netflix con arquitectura de microservicios. Backend en Java 21 y Spring Boot, frontend en React 19, mensajería con Kafka y observabilidad con Prometheus, Grafana y OpenTelemetry.",
+    "link": "",
+    "github": "https://github.com/StefanElijah/zynema-project",
+    "image": "",
+    "tags": ["JAVA", "SPRING", "REACT", "TYPESCRIPT", "DOCKER"]
+  },
+  {
+    "title": "SmartLogix",
+    "description": "Plataforma de gestión logística basada en microservicios, con Saga orquestada, RabbitMQ, Redis, Keycloak y dashboard analítico en Next.js.",
+    "link": "",
+    "github": "https://github.com/StefanElijah/smartlogix-project",
+    "image": "",
+    "tags": ["JAVA", "SPRING", "NEXT", "REACT", "TYPESCRIPT", "TAILWIND", "DOCKER"]
+  }
+]
