@@ -4,6 +4,7 @@ Portfolio personal de Esteban Pacheco Vega, Ingeniero de Software Full Stack y L
 
 ## Enlaces
 
+- [Repositorio](https://github.com/StefanElijah/porfolio.esteban)
 - [LinkedIn](https://www.linkedin.com/in/esteban-elias-pacheco-vega/)
 - [GitHub](https://github.com/StefanElijah)
 - [Email](mailto:esteban.pachecovega@gmail.com)
@@ -52,6 +53,11 @@ Variables de entorno en Production:
 - `NODE_VERSION=20`
 
 Cada push a `main` se despliega automáticamente.
+
+## Flujo de trabajo
+
+- `Develop`: rama de desarrollo diario. Los pushes no generan despliegues.
+- `main`: producción. Solo recibe merges desde `Develop` y dispara el despliegue en Cloudflare Pages.
 
 ## Licencia
 
