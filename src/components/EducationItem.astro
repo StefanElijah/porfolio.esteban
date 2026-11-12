@@ -1,0 +1,39 @@
+---
+interface Props {
+  degree: string
+  institution: string
+  period: string
+  description?: string
+  current?: boolean
+}
+
+const { degree, institution, period, description, current = false } = Astro.props
+---
+
+<article
+  class="rounded-xl border border-gray-200/70 bg-white/50 p-5 transition-colors duration-300 hover:border-yellow-400/40 dark:border-white/10 dark:bg-white/[0.02] dark:hover:border-yellow-400/30 sm:p-6"
+>
+  <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
+    <div>
+      <h4 class="text-lg font-semibold text-gray-800 dark:text-gray-100">{degree}</h4>
+      <p class="mt-1 text-sm font-medium text-yellow-600 dark:text-yellow-400">{institution}</p>
+    </div>
+    <div class="flex shrink-0 flex-wrap items-center gap-2">
+      {current && (
+        <span
+          class="rounded-full border border-yellow-500/30 bg-yellow-400/10 px-2.5 py-0.5 text-xs font-medium text-yellow-700 dark:border-yellow-400/20 dark:text-yellow-300"
+        >
+          En curso
+        </span>
+      )}
+      <span class="text-sm text-gray-500 dark:text-gray-400">{period}</span>
+    </div>
+  </div>
+  {
+    description && (
+      <p class="mt-4 text-sm text-gray-600 text-pretty dark:text-gray-400">
+        {description}
+      </p>
+    )
+  }
+</article>

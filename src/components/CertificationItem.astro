@@ -1,0 +1,50 @@
+---
+import ExternalLink from "./icons/ExternalLink.astro"
+
+interface Props {
+  name: string
+  issuer: string
+  date: string
+  credentialUrl?: string
+}
+
+const { name, issuer, date, credentialUrl } = Astro.props
+---
+
+{
+  credentialUrl ? (
+    <a
+      href={credentialUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="group flex h-full flex-col gap-3 rounded-xl border border-gray-200/70 bg-white/50 p-5 transition-colors duration-300 hover:border-yellow-400/50 hover:bg-yellow-400/[0.04] dark:border-white/10 dark:bg-white/[0.02] dark:hover:border-yellow-400/30"
+    >
+      <div class="flex items-start justify-between gap-3">
+        <h4 class="text-base font-semibold leading-snug text-gray-800 dark:text-gray-100">
+          {name}
+        </h4>
+        <ExternalLink
+          class="mt-0.5 size-4 shrink-0 text-gray-400 transition-colors duration-300 group-hover:text-yellow-500 dark:text-gray-500 dark:group-hover:text-yellow-400"
+          aria-hidden="true"
+        />
+      </div>
+      <p class="mt-auto flex flex-wrap items-center gap-x-1.5 text-sm text-gray-600 dark:text-gray-400">
+        <span>{issuer}</span>
+        <span aria-hidden="true">·</span>
+        <time datetime={date}>{date}</time>
+        <span class="sr-only">. Ver credencial</span>
+      </p>
+    </a>
+  ) : (
+    <div class="flex h-full flex-col gap-3 rounded-xl border border-gray-200/70 bg-white/50 p-5 dark:border-white/10 dark:bg-white/[0.02]">
+      <h4 class="text-base font-semibold leading-snug text-gray-800 dark:text-gray-100">
+        {name}
+      </h4>
+      <p class="mt-auto flex flex-wrap items-center gap-x-1.5 text-sm text-gray-600 dark:text-gray-400">
+        <span>{issuer}</span>
+        <span aria-hidden="true">·</span>
+        <time datetime={date}>{date}</time>
+      </p>
+    </div>
+  )
+}
