@@ -1,26 +1,34 @@
 [
   {
     "title": "Pastelería Mil Sabores",
-    "description": "Plataforma de pastelería con catálogo, flujo de compra, autenticación de usuarios y gestor de inventario. Construida con Next.js, React, TypeScript y Tailwind CSS.",
+    "description": "Plataforma de pastelería con catálogo, flujo de compra, autenticación de usuarios y gestor de inventario. Frontend con Next.js, React, TypeScript y Tailwind CSS; backend NestJS con Prisma, PostgreSQL, Redis y contenedores Docker y RabbitMQ.",
     "link": "https://pasteleria-mil-sabores.vercel.app",
     "github": "https://github.com/StefanElijah/pasteleria-project",
     "image": "",
-    "tags": ["NEXT", "REACT", "TYPESCRIPT", "TAILWIND"]
+    "tags": ["NEXT", "REACT", "TYPESCRIPT", "TAILWIND", "NESTJS", "PRISMA", "POSTGRESQL", "REDIS", "RABBITMQ", "DOCKER"]
   },
   {
     "title": "Zynema",
-    "description": "Plataforma de streaming tipo Netflix con arquitectura de microservicios. Backend en Java 21 y Spring Boot, frontend en React 19, mensajería con Kafka y observabilidad con Prometheus, Grafana y OpenTelemetry.",
+    "description": "Plataforma de streaming tipo Netflix con microservicios Spring Boot (Java 21), PostgreSQL, Redis, Kafka y Keycloak. Frontend React/TypeScript con reproductor HLS, pipeline de video con MinIO/FFmpeg, manifiestos Kubernetes y observabilidad con OpenTelemetry, Prometheus y Grafana.",
     "link": "",
     "github": "https://github.com/StefanElijah/zynema-project",
     "image": "",
-    "tags": ["JAVA", "SPRING", "REACT", "TYPESCRIPT", "DOCKER"]
+    "tags": ["JAVA", "SPRING", "REACT", "TYPESCRIPT", "TAILWIND", "POSTGRESQL", "REDIS", "KAFKA", "KEYCLOAK", "MINIO", "DOCKER", "KUBERNETES", "OPENTELEMETRY"]
   },
   {
     "title": "SmartLogix",
-    "description": "Plataforma de gestión logística basada en microservicios, con Saga orquestada, RabbitMQ, Redis, Keycloak y dashboard analítico en Next.js.",
+    "description": "Plataforma de gestión logística con microservicios Spring Boot (Java 21), MySQL, Redis, RabbitMQ y Keycloak, Saga orquestada y dashboard analítico en Next.js. Incluye NextAuth, pruebas E2E con Playwright, análisis con SonarCloud y stack contenerizado con Docker.",
     "link": "",
     "github": "https://github.com/StefanElijah/smartlogix-project",
     "image": "",
-    "tags": ["JAVA", "SPRING", "NEXT", "REACT", "TYPESCRIPT", "TAILWIND", "DOCKER"]
+    "tags": ["NEXT", "REACT", "TYPESCRIPT", "TAILWIND", "JAVA", "SPRING", "MYSQL", "REDIS", "RABBITMQ", "KEYCLOAK", "DOCKER", "NEXTAUTH", "KUBERNETES", "PLAYWRIGHT", "SONARCLOUD"]
+  },
+  {
+    "title": "SIGA - Sistema Integral de Gestión Académica",
+    "description": "Sistema Integral de Gestión Académica con frontend Angular y Nx, BFF y microservicios Spring Boot (Java 21), una base MariaDB por servicio, autenticación con Microsoft Entra ID (Azure AD) vía MSAL y Microsoft Graph, mensajería RabbitMQ y despliegue en AWS con Terraform.",
+    "link": "",
+    "github": "https://github.com/COdelValle/SIGA-Project",
+    "image": "",
+    "tags": ["ANGULAR", "TYPESCRIPT", "TAILWIND", "JAVA", "SPRING", "MARIADB", "RABBITMQ", "DOCKER", "TERRAFORM", "AWS", "AZURE", "NX", "MSAL"]
   }
 ]

@@ -1,0 +1,45 @@
+[
+  {
+    "name": "IBM Full Stack Software Developer Professional Certificate",
+    "issuer": "IBM",
+    "date": "2026"
+  },
+  {
+    "name": "IBM DevOps and Software Engineering Professional Certificate",
+    "issuer": "IBM",
+    "date": "2026"
+  },
+  {
+    "name": "IBM Java Developer Professional Certificate",
+    "issuer": "IBM",
+    "date": "2026"
+  },
+  {
+    "name": "IBM Front-End Developer Professional Certificate",
+    "issuer": "IBM",
+    "date": "2026"
+  },
+  {
+    "name": "IBM Back-End Development Professional Certificate",
+    "issuer": "IBM",
+    "date": "2026"
+  },
+  {
+    "name": "DevOps Advanced Professional Certification - DAPC™",
+    "issuer": "Certiprof",
+    "date": "2026",
+    "credentialUrl": "https://www.credly.com/badges/9950bb5f-87ef-4028-b7ed-5f1cd221b513/public_url"
+  },
+  {
+    "name": "Scrum Master Professional Certification - SMPC®",
+    "issuer": "Certiprof",
+    "date": "2026",
+    "credentialUrl": "https://www.credly.com/badges/1c45dc44-f968-4e71-a803-c812964a9f1d/public_url"
+  },
+  {
+    "name": "Design Thinking Professional Certification - DTPC®",
+    "issuer": "Certiprof",
+    "date": "2025",
+    "credentialUrl": "https://www.credly.com/badges/658b5915-ec84-4dc4-930e-d45c3c31870f/public_url"
+  }
+]

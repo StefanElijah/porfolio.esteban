@@ -10,7 +10,13 @@ import Projects from "@/components/Projects.astro"
 import SectionContainer from "@/components/SectionContainer.astro"
 import Hero from "@/components/Hero.astro"
 import TitleSection from "@/components/TitleSection.astro"
+import Formation from "@/components/Formation.astro"
+import GraduationCap from "@/components/icons/GraduationCap.astro"
+import certifications from "@/data/certifications.json"
+import education from "@/data/education.json"
 import experience from "@/data/experience.json"
+
+const hasFormation = education.length > 0 || certifications.length > 0
 ---
 
 <Layout
@@ -40,6 +46,16 @@ import experience from "@/data/experience.json"
       </TitleSection>
       <Projects />
     </SectionContainer>
+
+    {hasFormation && (
+      <SectionContainer id="formacion">
+        <TitleSection>
+          <GraduationCap class="size-8" />
+          Formación y certificaciones
+        </TitleSection>
+        <Formation />
+      </SectionContainer>
+    )}
 
     <SectionContainer id="sobre-mi">
       <TitleSection>

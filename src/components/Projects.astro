@@ -1,53 +1,128 @@
 ---
 import GitHub from "./icons/GitHub.astro"
-import NextJS from "./icons/NextJS.astro"
-import Tailwind from "./icons/Tailwind.astro"
+import TechIcon from "./icons/TechIcon.astro"
 import ExternalLink from "./icons/ExternalLink.astro"
-import Code from "./icons/Code.astro"
 import LinkButton from "./LinkButton.astro"
 import projectsData from "@/data/projects.json"
 
-const TAGS: Record<string, { name: string; class: string; icon: any }> = {
+const TAGS: Record<string, { name: string; class: string }> = {
   NEXT: {
     name: "Next.js",
     class: "bg-black text-white",
-    icon: NextJS,
   },
   TAILWIND: {
     name: "Tailwind CSS",
     class: "bg-[#003159] text-white",
-    icon: Tailwind,
   },
   REACT: {
     name: "React",
     class: "bg-[#087EA4] text-white",
-    icon: Code,
   },
   TYPESCRIPT: {
     name: "TypeScript",
     class: "bg-[#3178C6] text-white",
-    icon: Code,
   },
   JAVA: {
     name: "Java",
     class: "bg-[#ED8B00] text-white",
-    icon: Code,
   },
   SPRING: {
     name: "Spring Boot",
     class: "bg-[#6DB33F] text-white",
-    icon: Code,
   },
   DOCKER: {
     name: "Docker",
     class: "bg-[#2496ED] text-white",
-    icon: Code,
+  },
+  NESTJS: {
+    name: "NestJS",
+    class: "bg-[#E0234E] text-white",
+  },
+  PRISMA: {
+    name: "Prisma",
+    class: "bg-[#2D3748] text-white",
+  },
+  POSTGRESQL: {
+    name: "PostgreSQL",
+    class: "bg-[#4169E1] text-white",
+  },
+  MYSQL: {
+    name: "MySQL",
+    class: "bg-[#4479A1] text-white",
+  },
+  MARIADB: {
+    name: "MariaDB",
+    class: "bg-[#003545] text-white",
+  },
+  REDIS: {
+    name: "Redis",
+    class: "bg-[#DC382D] text-white",
+  },
+  RABBITMQ: {
+    name: "RabbitMQ",
+    class: "bg-[#FF6600] text-white",
+  },
+  KAFKA: {
+    name: "Apache Kafka",
+    class: "bg-[#231F20] text-white",
+  },
+  KEYCLOAK: {
+    name: "Keycloak",
+    class: "bg-[#008AAA] text-white",
+  },
+  MINIO: {
+    name: "MinIO",
+    class: "bg-[#C72C48] text-white",
+  },
+  ANGULAR: {
+    name: "Angular",
+    class: "bg-[#DD0031] text-white",
+  },
+  TERRAFORM: {
+    name: "Terraform",
+    class: "bg-[#7B42BC] text-white",
+  },
+  AWS: {
+    name: "AWS",
+    class: "bg-[#FF9900] text-white",
+  },
+  AZURE: {
+    name: "Azure",
+    class: "bg-[#0078D4] text-white",
+  },
+  NEXTAUTH: {
+    name: "NextAuth.js",
+    class: "bg-black text-white",
+  },
+  KUBERNETES: {
+    name: "Kubernetes",
+    class: "bg-[#326CE5] text-white",
+  },
+  PLAYWRIGHT: {
+    name: "Playwright",
+    class: "bg-[#2EAD33] text-white",
+  },
+  SONARCLOUD: {
+    name: "SonarCloud",
+    class: "bg-[#4E9BCD] text-white",
+  },
+  OPENTELEMETRY: {
+    name: "OpenTelemetry",
+    class: "bg-[#425CC7] text-white",
+  },
+  NX: {
+    name: "Nx",
+    class: "bg-[#143055] text-white",
+  },
+  MSAL: {
+    name: "MSAL",
+    class: "bg-[#5E5E5E] text-white",
   },
 }
 
 const PROJECTS = projectsData.map((project) => ({
   ...project,
-  tags: project.tags.map((key) => TAGS[key]),
+  tags: project.tags.map((key) => ({ key, ...TAGS[key] })),
 }))
 ---
 
@@ -92,7 +167,7 @@ const PROJECTS = projectsData.map((project) => ({
                 <span
                   class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
                 >
-                  <tag.icon class="size-4" />
+                  <TechIcon name={tag.key} class="size-4" />
                   {tag.name}
                 </span>
               </li>

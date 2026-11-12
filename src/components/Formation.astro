@@ -1,0 +1,89 @@
+---
+import CertificationItem from "./CertificationItem.astro"
+import EducationItem from "./EducationItem.astro"
+import certificationsData from "@/data/certifications.json"
+import educationData from "@/data/education.json"
+import languagesData from "@/data/languages.json"
+
+interface EducationEntry {
+  degree: string
+  institution: string
+  period: string
+  description?: string
+  current?: boolean
+}
+
+interface CertificationEntry {
+  name: string
+  issuer: string
+  date: string
+  credentialUrl?: string
+}
+
+interface LanguageEntry {
+  name: string
+  level: string
+  cefr: string
+}
+
+const education = educationData as EducationEntry[]
+const certifications = certificationsData as CertificationEntry[]
+const languages = languagesData as LanguageEntry[]
+
+const subtitleClass =
+  "text-xs font-semibold uppercase tracking-[0.2em] text-gray-500 dark:text-gray-400"
+---
+
+<div class="mt-12 space-y-12">
+  {
+    education.length > 0 && (
+      <div>
+        <h3 class={`${subtitleClass} mb-5`}>Educación</h3>
+        <ol class="space-y-4" aria-label="Educación">
+          {education.map((item, i) => (
+            <li class="anim-fade-in" style={`animation-delay: ${i * 150}ms`}>
+              <EducationItem {...item} />
+            </li>
+          ))}
+        </ol>
+      </div>
+    )
+  }
+
+  {
+    certifications.length > 0 && (
+      <div>
+        <h3 class={`${subtitleClass} mb-5`}>Certificaciones</h3>
+        <ul class="grid gap-4 sm:grid-cols-2" aria-label="Certificaciones">
+          {certifications.map((cert, i) => (
+            <li class="anim-fade-in" style={`animation-delay: ${i * 100}ms`}>
+              <CertificationItem {...cert} />
+            </li>
+          ))}
+        </ul>
+      </div>
+    )
+  }
+
+  {
+    languages.length > 0 && (
+      <div class="border-t border-gray-200/70 pt-8 dark:border-white/10">
+        <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <h3 class={subtitleClass}>Idiomas</h3>
+          <ul class="flex flex-wrap gap-x-8 gap-y-2" aria-label="Idiomas">
+            {languages.map((language) => (
+              <li class="flex items-baseline gap-2">
+                <span class="font-medium text-gray-800 dark:text-gray-100">
+                  {language.name}
+                </span>
+                <span class="text-sm text-gray-500 dark:text-gray-400">
+                  {language.level} · {language.cefr}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    )
+  }
+</div>
